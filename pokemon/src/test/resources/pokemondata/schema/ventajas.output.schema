@@ -1,0 +1,97 @@
+{
+  "namespace": "kdit",
+  "name": "t_kdit_ventaja",
+  "doc": "Tabla que contiene informacion de la ventaja de batalla de cada pokemon de acuerdo a su naturaleza.",
+  "database": "master",
+  "storageZone": "MASTERDATA",
+  "storageType": "HDFS-Parquet",
+  "physicalPath": "/data/master/kdit/data/t_kdit_ventaja",
+  "partitions": ["pkmn_nature_type"],
+  "securityLevel": "L1",
+  "type": "record",
+  "fields": [{
+    "name": "pkmn_nature_type",
+    "type": "string",
+    "logicalFormat": "ALPHANUMERIC(50)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "pkmn_battle_advant_type",
+    "type": "string",
+    "logicalFormat": "ALPHANUMERIC(50)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "pkmn_battle_advant1_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(50)",
+    "deleted": false,
+    "metadata": false,
+    "default": "NA"
+  }, {
+    "name": "pkmn_battle_advant2_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(50)",
+    "deleted": false,
+    "metadata": false,
+    "default": "NA"
+  }, {
+    "name": "pkmn_battle_advant3_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(50)",
+    "deleted": false,
+    "metadata": false,
+    "default": "NA"
+  }, {
+    "name": "pkmn_battle_advant4_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(50)",
+    "deleted": false,
+    "metadata": false,
+    "default": "NA"
+  }, {
+    "name": "pkmn_battle_disadv_type",
+    "type": "string",
+    "logicalFormat": "ALPHANUMERIC(50)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "pkmn_battle_disadv1_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(50)",
+    "deleted": false,
+    "metadata": false,
+    "default": "NA"
+  }, {
+    "name": "pkmn_battle_disadv2_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(50)",
+    "deleted": false,
+    "metadata": false,
+    "default": "NA"
+  }, {
+    "name": "pkmn_battle_disadv3_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(50)",
+    "deleted": false,
+    "metadata": false,
+    "default": "NA"
+  }, {
+    "name": "pkmn_battle_disadv4_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(50)",
+    "deleted": false,
+    "metadata": false,
+    "default": "NA"
+  }, {
+    "name": "pkmn_sp_nature_no_affect_type",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(50)",
+    "deleted": false,
+    "metadata": false,
+    "default": "NA"
+  }]
+}

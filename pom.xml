@@ -57,6 +57,7 @@
 
     <modules>
         <module>example</module>
+        <module>pokemon</module>
         <module>testAT</module>
     </modules>
 </project>

@@ -26,6 +26,9 @@ class Engine extends SparkProcess with IOUtils {
     val config: Config = runtimeContext.getConfig
 
     val jwkDate: String = config.getString(ExampleConfigConstants.JwkDate)
+    val devName: String = config.getString("exampleJob.params.devName")
+
+    logger.info(s">>> Bienvenido al curso de procesamiento $devName")
 
     //Load inputs
     val phonesConfig: Config = config.getConfig(ExampleConfigConstants.PhonesConfig)

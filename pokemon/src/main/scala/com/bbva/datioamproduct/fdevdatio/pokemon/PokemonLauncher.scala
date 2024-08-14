@@ -1,11 +1,11 @@
-package com.bbva.datioamproduct.fdevdatio
+package com.bbva.datioamproduct.fdevdatio.pokemon
 
 import com.datio.dataproc.sdk.launcher.SparkLauncher
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 
 
-object Launcher {
+object PokemonLauncher {
   private val logger: Logger = LoggerFactory.getLogger(this.getClass)
 
   /**
@@ -18,6 +18,6 @@ object Launcher {
       logger.error("Parameter configuration file path is mandatory. Exiting...")
       System.exit(1000)
     }
-    SparkLauncher.main(Array(args(0), "Engine"))
+    SparkLauncher.main(Array(args(0), "PokemonJob"))
   }
 }
