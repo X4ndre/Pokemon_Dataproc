@@ -6,6 +6,8 @@ object ConfigConstants {
   val InputTag: String = s"$RootTag.input"
   val CommaSpace: String = ", "
   val Comma: String = ","
+  val FalseTag: String = "FALSE"
+  val NadieTag: String = "NADIE"
 
 
   case object Tags {
