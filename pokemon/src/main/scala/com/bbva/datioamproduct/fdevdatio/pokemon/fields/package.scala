@@ -14,8 +14,6 @@ package object fields {
 
   case object Generation extends Field {
     override val name:String = "pkmn_generation_number"
-
-    def filtter(date:String): Column = column === date
   }
 
   case object PokemonName extends Field{

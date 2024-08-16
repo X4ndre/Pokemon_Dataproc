@@ -44,6 +44,8 @@ class PokemonJob extends SparkProcess with IOUtils{
 
     val result = validPokemon.crossJoinPokemon(alanPokemon).battleTest
     result.battleProbability.theVeryBest.show()
+
+    //3.7
     0
   }
 

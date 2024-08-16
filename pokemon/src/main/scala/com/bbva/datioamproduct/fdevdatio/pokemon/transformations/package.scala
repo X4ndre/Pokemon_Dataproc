@@ -30,7 +30,7 @@ package object transformations {
     }
 
     def regionCount: Dataset[Row] =
-      ds.groupBy(Region.column).agg(count(Region.column))
+      ds.groupBy(Region.column).agg(count(Region.column).alias("count"))
 
     def legendaryFilter: Dataset[Row] = {
       ds.filter(Legendary.column === FalseTag)
@@ -133,7 +133,7 @@ package object transformations {
         col(Nature1.name).alias(AlanType2.name), Total.column.alias(AlanTotal.name),
         Ventaja.column, PokemonNameValid.column.alias(Adv.name), NatureValid.column.alias(AdvType1.name),
         Nature1Valid.column.alias(AdvType2.name), TotalValid.column.alias(AdvTotal.name),
-        Ganar.column.alias(Ganar.name), GanarTipo.column, AvgGanar.column)
+        Ganar.column.alias(Ganar.name), GanarTipo.column, AvgGanar.column, Generation.column)
 
     }
 
@@ -144,6 +144,7 @@ package object transformations {
         .select(ds.columns.map(col) :+ rank().over(window).alias(Rank.name) :_*)
         .filter(Rank.column < 7)
         .drop(Rank.name)
+        .distinct()
     }
   }
 

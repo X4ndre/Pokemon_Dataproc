@@ -33,6 +33,13 @@
     "metadata": false,
     "default": ""
   }, {
+    "name": "pkmn_form",
+    "type": "string",
+    "logicalFormat": "ALPHANUMERIC(50)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
     "name": "pkmn_nature_type",
     "type": "string",
     "logicalFormat": "ALPHANUMERIC(50)",
